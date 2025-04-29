@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I Love You</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url(images/wallpaper.jpg) no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Comic Sans MS', cursive, serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1s ease; 
+    }
+
+    .card {
+      background: rgb(255, 255, 255);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+    }
+
+    h1 {
+      color: #ff69b4;
+      font-size: 2rem; 
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.3rem; 
+      font-weight: bold; 
+      margin: 1rem 0;
+    }
+
+    button {
+      background-color: #ff69b4;
+      color: white;
+      padding: 0.8rem 1.5rem; 
+      border: none;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      font-weight: bold; 
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff1493;
+    }
+
+    img {
+      width: 100%; 
+      height: 300px; 
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .audio-controls {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div id="birthdayCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/hiwo1.jpg" class="d-block w-100" alt="Happy Birthday Image 1">
+        </div>
+        <div class="carousel-item">
+          <img src="images/hiwo2.jpg" class="d-block w-100" alt="Happy Birthday Image 2">
+        </div>
+        <div class="carousel-item">
+          <img src="images/hiwo3.jpg" class="d-block w-100" alt="Happy Birthday Image 3">
+        </div>
+        <div class="carousel-item">
+          <img src="images/hiwo4.jpg" class="d-block w-100" alt="Happy Birthday Image 4">
+        </div>
+        <div class="carousel-item">
+          <img src="images/hiwo5.jpg" class="d-block w-100" alt="Happy Birthday Image 5">
+        </div>
+        <div class="carousel-item">
+          <img src="images/hiwo6.jpg" class="d-block w-100" alt="Happy Birthday Image 6">
+        </div>
+        <div class="carousel-item">
+            <img src="images/hiwo7.jpg" class="d-block w-100" alt="Happy Birthday Image 6">
+        </div>
+        <div class="carousel-item">
+            <img src="images/hiwo8.jpg" class="d-block w-100" alt="Happy Birthday Image 6">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#birthdayCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#birthdayCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <h1>Happy Birthday, My Hiwo! </h1>
+    <p>Wishing you a life full of love, joy, and everything that makes you feel special.</p>
+    <button id="toggleButton" onclick="toggleMessages()">Tap Here, Lovey!</button>
+    <div id="messages" style="display: none; margin-top: 1rem;">
+      <p>You are the most beautiful part of my life, and I'm so grateful every day to call you my lovey. You make everything better just by being you, and I can’t wait to celebrate many more birthdays by your side. I love you so much today, tomorrow, and always 🤍🤍🤍</p>
+    </div>
+  </div>
+
+  <div class="audio-controls">
+    <audio controls autoplay>
+      <source src="audio/wave to earth - 사랑으로 (love.).mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    window.onload = function () {
+      document.body.style.opacity = '1';
+    };
+
+    function toggleMessages() {
+      const messages = document.getElementById('messages');
+      const button = document.getElementById('toggleButton');
+      if (messages.style.display === 'none') {
+        messages.style.display = 'block';
+        button.textContent = 'Close';
+      } else {
+        messages.style.display = 'none';
+        button.textContent = 'Tap Again';
+      }
+    }
+  </script>
+</body>
+</html>
